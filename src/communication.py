@@ -1,6 +1,6 @@
 """Communication file using socket."""
 
-# NOTE: This file is mostly written as it is far from our focus.
+# NOTE: This file is mostly copied/referenced as it is far from our focus.
 
 import logging
 import pickle

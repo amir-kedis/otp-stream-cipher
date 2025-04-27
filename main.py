@@ -32,19 +32,15 @@ class OneTimePadSystem:
         )
 
     def int_to_bytes(self, n: int) -> bytes:
-        """Convert integer to bytes"""
         return n.to_bytes((n.bit_length() + 7) // 8, byteorder="big")
 
     def bytes_to_int(self, b: bytes) -> int:
-        """Convert bytes to integer"""
         return int.from_bytes(b, byteorder="big")
 
     def generate_seed(self) -> int:
-        """Generate a random seed"""
         return secrets.randbits(256)
 
     def sender(self, input_file: str):
-        """Implement sender logic"""
         try:
             # Start server
             self.comm.start_server()
